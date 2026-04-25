@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wack-a-Turtle Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <img class="logo" src="pics/vtwhiter.png.webp" alt="logo">
+    <div class="nav-center">
+        <ul class="nav-links">
+            <li><a href="draft1final.html">Home</a></li>
+            <li><a href="snakeslizards.html">Snakes / Lizards</a></li>
+            <li><a href="turtles.html">Turtles</a></li>
+            <li><a href="games.html">Games /Resources</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Main Game Wrapper -->
+<section>
+<div class="game-wrapper">
+
+    <!-- Wack-a-Turtle Game Section -->
+    <div class="game-box">
+        <h2>🐢Wack-a-turte🐢</h2>
+        <h3>Score: <span id="score">0</span></h3>
+        <h3>Time Remaining: <span id="time">30</span> seconds</h3>
+        <div class="gridStyle" id="grid"></div>
+        <button onclick="startGame()">Start Game</button>
+        <p id="message"></p>
+    </div>
+
+    <!-- Image Section -->
+    <div class="middle-image">
+        <img class="game-image" src="pics/spotted2.jpg" alt="turtle image">
+    </div>
+
+    <!-- Fun Facts Section -->
+    <div class="facts">
+        <h3>🐢 Fun Facts</h3>
+        <p id="factText">Click start to learn a fact!</p>
+        <button onclick="showFact()">New Fact</button>
+    </div>
+
+</div>
+</section>
+
+ 
+<!-- Match the Species Section -->
+<section>
+
+<div class="main-row">
+
+    <!-- LEFT BOX -->
+  <div class="side-box survey-box">
+
+    <h3>🐢 Herp Survey</h3>
+    <p id="resultMessage"></p>
+
+    <form id="surveyForm">
+
+        <label>Why are you visiting this site today?</label><br>
+        <input type="text" id="reason" required><br><br>
+
+        <p>Do you know what Herpetology is?</p>
+
+        <div class="radio-row">
+            <label><input type="radio" name="knowledge" value="Yes"> Yes</label>
+            <label><input type="radio" name="knowledge" value="No"> No</label>
+            <label><input type="radio" name="knowledge" value="Familiar"> Sounds familiar</label>
+        </div>
+
+        <br><br>
+
+        <label>Favorite type:</label><br>
+        <select id="favorite" required>
+            <option value="">Choose</option>
+            <option value="Snake">Snake</option>
+            <option value="Lizard">Lizard</option>
+            <option value="Turtle">Turtle</option>
+        </select>
+
+        <br><br>
+
+        <button type="submit">Submit</button>
+
+    </form>
+</div>
+
+    <!-- CENTER GAME -->
+    <div class="match-center">
+
+        <h1>🐢 Match the Species</h1>
+
+        <p class="match-instructions">
+            Click one image, then click the correct name
+        </p>
+
+        <div class="match-header">
+            <div>📸 IMAGES</div>
+            <div>📝 NAMES</div>
+        </div>
+
+        <div class="match-wrapper">
+            <div class="match-column" id="image"></div>
+            <div class="match-column" id="options"></div>
+        </div>
+
+        <div class="mtsbuttonbox">
+
+            <div class="button-row">
+
+                <button id="submitBtn">Submit</button>
+
+                <button id="restartBtn" onclick="restartGame()" style="display:none;">
+                    Restart Game
+                </button>
+
+            </div>
+
+            <span id="matchScore"></span>
+
+            <p id="feedback"></p>
+
+            <button id="nextBtn" style="display: none;">
+                Next Question
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT BOX -->
+    <div class="side-box">
+
+    <h3><u>🦎 Herp Resources</h3></u>
+
+    <p>
+       
+        <a href="https://www.lcbp.org/2024/03/reptile-and-amphibian-conservation-resources/ target="target="_blank">
+            Lake Champlain Basin Program 
+        </a> 
+    </p>
+
+    <p>
+       <a href="https://www.vtherpatlas.org/contributors/become-involved/practice-conservation/"target="_blank">
+            Vermont Reptile and Amphibian Atlas
+        </a> 
+    </p>
+    <p>
+       <a href="https://ssarherps.org/" target="_blank">
+            The Society for the Study of Reptiles and Amphibians 
+        </a> 
+    </p>
+
+    <p>
+       <a href="https://www.oriannesociety.org/?v=f69b47f43ce4"target="_blank">
+            The Orianne Society 
+        </a> 
+    </p>
+
+</div>
+
+</div>
+
+</section>
+<script src="script.js"></script>
+</body>
+</html>
